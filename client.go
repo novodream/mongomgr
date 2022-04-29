@@ -15,13 +15,13 @@ func Connect(ctx context.Context) (*mongo.Database, error) {
 	if err != nil {
 		return nil, err
 	}
-	uri := c.GetString("mongomgr.uri")
+	uri := c.GetString("mongo.uri")
 	if uri == "" {
 		return nil, fmt.Errorf(
 			"you must set your 'MONGO_URI' config",
 		)
 	}
-	db := c.GetString("mongomgr.dbname")
+	db := c.GetString("mongo.dbname")
 	if db == "" {
 		return nil, fmt.Errorf(
 			"you must set your 'MONGO_DBNAME' config",
