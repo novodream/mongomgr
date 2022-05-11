@@ -3,7 +3,6 @@ package mongomgr
 import (
 	"context"
 	"fmt"
-	"github.com/novopattern/ermcfg"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
@@ -11,7 +10,7 @@ import (
 var Client *mongo.Client
 
 func Connect(ctx context.Context) (*mongo.Database, error) {
-	c, err := ermcfg.LoadEnvConfig()
+	c, err := loadEnvConfig()
 	if err != nil {
 		return nil, err
 	}

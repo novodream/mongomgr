@@ -3,10 +3,9 @@ module github.com/novopattern/mongomgr
 go 1.18
 
 require (
+	github.com/spf13/viper v1.11.0
 	go.mongodb.org/mongo-driver v1.9.0
 )
-
-replace github.com/novopattern/ermcfg => ../ermcfg
 
 require (
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
@@ -23,7 +22,6 @@ require (
 	github.com/spf13/cast v1.4.1 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/spf13/viper v1.11.0 // indirect
 	github.com/subosito/gotenv v1.2.0 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.0.2 // indirect
