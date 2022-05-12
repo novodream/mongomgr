@@ -17,7 +17,7 @@ func (c *Config) load() error {
 
 	c.SetConfigName(c.name)
 	c.SetConfigType("yaml")
-	c.AddConfigPath(".")
+	c.AddConfigPath(".dream")
 	if err := c.ReadInConfig(); err != nil {
 		if _, ok := err.(viper.ConfigFileNotFoundError); ok {
 			// Config file not found; ignore error
@@ -29,15 +29,11 @@ func (c *Config) load() error {
 	return nil
 }
 
-func (c *Config) Save() error {
-	return c.WriteConfigAs(strings.Join([]string{c.name, "yaml"}, "."))
-}
-
 func load(name string) (*Config, error) {
 	c := &Config{viper.New(), name}
 	return c, c.load()
 }
 
 func loadEnvConfig() (*Config, error) {
-	return load(".dreamenv")
+	return load("env.yml")
 }
