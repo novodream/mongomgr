@@ -1,4 +1,4 @@
-module github.com/novopattern/mongomgr
+module github.com/novodream/mongomgr
 
 go 1.18
 
